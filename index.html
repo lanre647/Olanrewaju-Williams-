@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olanrewaju Williams - Full Stack Developer.</title>
+    <meta name="title" content="Olanrewaju Williams - Full Stack Developer." />
+    <meta name="description" content="html,css,javascript" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header" data-header>
+      <div class="container">
+        <a href="#">
+          <img class="logo" alt="logo" src="assets/logo.svg" />
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li>
+              <a class="main-nav-link active" href="#section-hero">Home</a>
+            </li>
+            <li>
+              <a class="main-nav-link" href="#about-section">About</a>
+            </li>
+            <li>
+              <a class="main-nav-link" href="#portfolio-section">Portfolio</a>
+            </li>
+            <li>
+              <a class="main-nav-link" href="#skills-section">Skills</a>
+            </li>
+            <li>
+              <a
+                data-value="Skills"
+                class="main-nav-link"
+                href="#contact-section"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="action">
+          <a class="btn-1">
+            Resume
+
+            <div class="icon">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                >
+                  <path
+                    d="M1.05403 31.6175C0.271626 32.3972 0.271626 33.6614 1.05403 34.441C1.83644 35.2207 3.10497 35.2207 3.88737 34.441L1.05403 31.6175ZM35.5599 2.05152C35.5599 0.948871 34.6629 0.0549994 33.5564 0.0549994L15.5251 0.0549994C14.4187 0.0549994 13.5217 0.948871 13.5217 2.05152C13.5217 3.15416 14.4187 4.04804 15.5251 4.04804H31.5529V20.0202C31.5529 21.1228 32.4499 22.0167 33.5564 22.0167C34.6629 22.0167 35.5599 21.1228 35.5599 20.0202L35.5599 2.05152ZM3.88737 34.441L34.9731 3.46327L32.1397 0.639766L1.05403 31.6175L3.88737 34.441Z"
+                  />
+                </svg>
+              </span>
+            </div>
+          </a>
+          <img id="togglebtn" src="assets/sun.png" alt="" />
+        </div>
+      </div>
+    </header>
+    <!--hero section-->
+    <section class="section-hero section" id="section-hero">
+      <div id="circle-text-container"></div>
+
+      <div class="container">
+        <div class="hero">
+          <div class="hero-text-box">
+            <p class="h5 subheading"><span class="hand">👋</span> I'm Lanre</p>
+            <h1 class="h1 hero-title">Front-End Developer + UI/UX Designer</h1>
+            <div class="hero-img-box">
+              <img
+                src="assets/olanrewajuwilliams.jpg"
+                class="hero-img"
+                alt="olanrewaju williams"
+              />
+            </div>
+            <p class="hero-description-text">
+              Welcome to my digital workspace! As a seasoned developer, I bring
+              a symphony of skills to the table:
+              <span class="highlight">collaborative development</span> is my
+              concert hall, <span class="highlight">code quality</span> my
+              instrument, <span class="highlight">version control</span> my
+              sheet music, and
+              <span class="highlight">code review</span> processes my meticulous
+              rehearsals.
+              <!-- Together, they compose the masterpieces of my career. Dive into my
+              <a href="#">portfolio</a>
+              and witness the harmony of teamwork and technology. Let's
+              orchestrate your project's success and hit every note to
+              perfection. Explore, engage, and let's turn your vision into a
+              reality that resonates with excellence. 🎶👨‍💻 -->
+            </p>
+            <div class="links">
+              <a href="#contact-section" class="btn-1">
+                Get In Touch
+
+                <div class="icon">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="36"
+                      height="36"
+                      viewBox="0 0 36 36"
+                      fill="none"
+                    >
+                      <path
+                        d="M1.05403 31.6175C0.271626 32.3972 0.271626 33.6614 1.05403 34.441C1.83644 35.2207 3.10497 35.2207 3.88737 34.441L1.05403 31.6175ZM35.5599 2.05152C35.5599 0.948871 34.6629 0.0549994 33.5564 0.0549994L15.5251 0.0549994C14.4187 0.0549994 13.5217 0.948871 13.5217 2.05152C13.5217 3.15416 14.4187 4.04804 15.5251 4.04804H31.5529V20.0202C31.5529 21.1228 32.4499 22.0167 33.5564 22.0167C34.6629 22.0167 35.5599 21.1228 35.5599 20.0202L35.5599 2.05152ZM3.88737 34.441L34.9731 3.46327L32.1397 0.639766L1.05403 31.6175L3.88737 34.441Z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+              <div class="icons">
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--about section-->
+    <section class="about-section" id="about-section">
+      <div class="container">
+        <h2 class="h2 heading-secondary">Meet the Digital Dynamo</h2>
+      </div>
+      <div class="container row relative">
+        <div class="img-col">
+          <img src="assets/olanrewajuwilliams-about2.jpg" alt="" />
+        </div>
+        <div class="content-col">
+          <p class="about-text">
+            Greetings, fellow adventurers of the digital realm! I'm
+            <span class="highlight"
+              >olanrewaju williams, a self-proclaimed pixel sorcerer with a love
+              for all things tech and anime.</span
+            >
+            From debugging dilemmas to crafting code conundrums, I bring a burst
+            of energy and a sprinkle of magic to every project I touch.
+          </p>
+          <p class="about-text">
+            When I'm not busy summoning code spells, you can find me chasing
+            sunsets, exploring new movies(anime), or pondering the mysteries of
+            the digital universe (and binge-watching the latest tech
+            documentaries).
+          </p>
+          <div class="tab_titles">
+            <p class="tab_links active_link" onclick="opentab('skills')">
+              Skills
+            </p>
+            <p class="tab_links" onclick="opentab('experience')">Experience</p>
+            <p class="tab_links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab_contents active_tab" id="skills">
+            <ul>
+              <li><span>UI/UX</span><br />Designing web/App interfaces</li>
+              <li><span>Web Development</span><br />Web app Development</li>
+              <li>
+                <span>App Development</span><br />Building Android/ios apps
+              </li>
+            </ul>
+          </div>
+          <div class="tab_contents" id="experience">
+            <ul>
+              <li>
+                <span>2021 - Current</span><br />UI/UX Design Trainning At ET
+                Institution
+              </li>
+              <li><span>2019 - 2021</span><br />App Lead At StarApp LLC.</li>
+              <li>
+                <span>2017 - 2019</span><br />UI/UX Design Executive At Coin
+                Digital LTD.
+              </li>
+              <li>
+                <span>2016 - 2017</span><br />internship At Ekart Ecommerce.
+              </li>
+            </ul>
+          </div>
+          <div class="tab_contents" id="education">
+            <ul>
+              <li>
+                <span>2022 - Current</span><br />Aptech Computer Education
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--portfolio section-->
+    <section class="section portfolio-section" id="portfolio-section">
+      <div class="container">
+        <div class="container">
+          <h2 class="h2 heading-secondary">Let's Party with Projects</h2>
+        </div>
+
+        <ul class="grid-list">
+          <li>
+            <div class="project-card project-card-1">
+              <div class="card-content" data-reveal="left">
+                <p class="card-tag">Web Design</p>
+
+                <h3 class="h3 card-title">Snowlake Theme</h3>
+
+                <p class="card-text">
+                  Maecenas faucibus mollis interdum sed posuere consectetur est
+                  at lobortis. Scelerisque id ligula porta felis euismod semper.
+                  Fusce dapibus tellus cursus.
+                </p>
+
+                <div class="tech">HTML . CSS . JavaScript</div>
+
+                <div class="btn-link">
+                  <a
+                    href="https://github.com/bchiang7/halcyon-site"
+                    aria-label="GitHub Link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-github"
+                    >
+                      <title>GitHub</title>
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path></svg></a
+                  ><a
+                    href="https://halcyon-theme.netlify.com/"
+                    aria-label="External Link"
+                    class="external"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-external-link"
+                    >
+                      <title>External Link</title>
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line></svg
+                  ></a>
+                </div>
+              </div>
+
+              <figure class="card-banner">
+                <img
+                  src="./assets/portfolio/item-1.webp"
+                  width="650"
+                  height="370"
+                  loading="lazy"
+                  alt="Web Design"
+                  class="w-100"
+                />
+              </figure>
+            </div>
+          </li>
+
+          <li>
+            <div class="project-card project-card-2">
+              <div class="card-content">
+                <p class="card-tag">Mobile Design</p>
+
+                <h3 class="h3 card-title">Budget App</h3>
+
+                <p class="card-text">
+                  Maecenas faucibus mollis interdum sed posuere consectetur est
+                  at lobortis. Scelerisque id ligula porta felis euismod semper.
+                  Fusce dapibus tellus cursus.
+                </p>
+
+                <div class="tech">HTML . CSS . JavaScript</div>
+
+                <div class="btn-link">
+                  <a
+                    href="https://github.com/bchiang7/halcyon-site"
+                    aria-label="GitHub Link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-github"
+                    >
+                      <title>GitHub</title>
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path></svg></a
+                  ><a
+                    href="https://halcyon-theme.netlify.com/"
+                    aria-label="External Link"
+                    class="external"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-external-link"
+                    >
+                      <title>External Link</title>
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line></svg
+                  ></a>
+                </div>
+              </div>
+
+              <figure class="card-banner">
+                <img
+                  src="./assets/portfolio/item-2.webp"
+                  width="600"
+                  height="367"
+                  loading="lazy"
+                  alt="Web Design"
+                  class="w-100"
+                />
+              </figure>
+            </div>
+          </li>
+
+          <li>
+            <div class="project-card project-card-3">
+              <div class="card-content" data-reveal="left">
+                <p class="card-tag">Web Design</p>
+
+                <h3 class="h3 card-title">Missio Theme</h3>
+
+                <p class="card-text">
+                  Maecenas faucibus mollis interdum sed posuere porta
+                  consectetur cursus porta lobortis. Scelerisque id ligula
+                  felis.
+                </p>
+
+                <div class="tech">HTML . CSS . JavaScript</div>
+
+                <div class="btn-link">
+                  <a
+                    href="https://github.com/bchiang7/halcyon-site"
+                    aria-label="GitHub Link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-github"
+                    >
+                      <title>GitHub</title>
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path></svg></a
+                  ><a
+                    href="https://halcyon-theme.netlify.com/"
+                    aria-label="External Link"
+                    class="external"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-external-link"
+                    >
+                      <title>External Link</title>
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line></svg
+                  ></a>
+                </div>
+              </div>
+
+              <figure class="card-banner">
+                <img
+                  src="./assets/portfolio/item-3.webp"
+                  width="600"
+                  height="367"
+                  loading="lazy"
+                  alt="Web Design"
+                  class="w-100"
+                />
+              </figure>
+            </div>
+          </li>
+
+          <li>
+            <div class="project-card project-card-4">
+              <div class="card-content">
+                <p class="card-tag">Mobile Design</p>
+
+                <h3 class="h3 card-title">Storage App</h3>
+
+                <p class="card-text">
+                  Maecenas faucibus mollis interdum sed posuere consectetur est
+                  at lobortis. Scelerisque id ligula porta felis euismod semper.
+                </p>
+
+                <div class="tech">HTML . CSS . JavaScript</div>
+
+                <div class="btn-link">
+                  <a
+                    href="https://github.com/bchiang7/halcyon-site"
+                    aria-label="GitHub Link"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-github"
+                    >
+                      <title>GitHub</title>
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      ></path></svg></a
+                  ><a
+                    href="https://halcyon-theme.netlify.com/"
+                    aria-label="External Link"
+                    class="external"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-external-link"
+                    >
+                      <title>External Link</title>
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line></svg
+                  ></a>
+                </div>
+              </div>
+
+              <figure class="card-banner">
+                <img
+                  src="./assets/portfolio/item-4.webp"
+                  width="620"
+                  height="370"
+                  loading="lazy"
+                  alt="Mobile Design"
+                  class="w-100"
+                />
+              </figure>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--skills section-->
+    <div class="skills-section" id="skills-section">
+      <div class="container">
+        <h2 class="h2 heading-secondary">Supercharged Skills</h2>
+      </div>
+      <div class="container">
+        <div class="skill-grid">
+          <div class="skill">
+            <div class="circle" data-degree="84" data-color="#ff2972">
+              <h1 class="number">84<span>%</span></h1>
+              <h4>HTML</h4>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="circle" data-degree="74" data-color="#fee800">
+              <h1 class="number">74<span>%</span></h1>
+              <h4>CSS</h4>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="circle" data-degree="66" data-color="#04f243">
+              <h1 class="number">66<span>%</span></h1>
+              <h4>JavaScript</h4>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="circle" data-degree="30" data-color="#f8ffee">
+              <h1 class="number">30<span>%</span></h1>
+              <h4>React</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--contact section-->
+    <section class="section contact-section" id="contact-section">
+      <div class="container">
+        <h2 class="h2 heading-secondary">
+          Let's Create Digital Magic Together
+        </h2>
+        <p>
+          <span class="highlight"
+            >Ready to sprinkle some digital fairy dust on your next
+            project?</span
+          >
+          Shoot me a message via <span class="highlight">email</span> at or send
+          a carrier pigeon (or a DM on <span class="highlight">Twitter</span>).
+          <span class="highlight">Let's team up</span> and create digital
+          wonders that will light up the digital sky with fireworks of
+          creativity and innovation!
+        </p>
+      </div>
+      <div class="container">
+        <div class="grid">
+          <div class="my-info">
+            <ion-icon name="location" class="h3 my-info-icon"></ion-icon>
+            <h3>Adress</h3>
+            <p>123 agric, ikorodu, nigeria</p>
+          </div>
+          <div class="my-info">
+            <ion-icon name="call" class="h3 my-info-icon"></ion-icon>
+            <h3>Phone</h3>
+            <p>+234 9154352021</p>
+          </div>
+          <div class="my-info">
+            <ion-icon name="mail" class="h4 my-info-icon"></ion-icon>
+            <h3>Email</h3>
+            <p>owolabilanre2006@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="grid-row">
+          <form>
+            <input type="text" name="Name" placeholder="Name *" required />
+            <input type="email" name="Email" placeholder="Email *" required />
+            <textarea
+              name="Message"
+              id=""
+              rows="6"
+              placeholder="Your Massage *"
+            ></textarea>
+            <button type="submit" class="btn-1">
+              Send Your Quest
+
+              <div class="icon">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="36"
+                    height="36"
+                    viewBox="0 0 36 36"
+                    fill="none"
+                  >
+                    <path
+                      d="M1.05403 31.6175C0.271626 32.3972 0.271626 33.6614 1.05403 34.441C1.83644 35.2207 3.10497 35.2207 3.88737 34.441L1.05403 31.6175ZM35.5599 2.05152C35.5599 0.948871 34.6629 0.0549994 33.5564 0.0549994L15.5251 0.0549994C14.4187 0.0549994 13.5217 0.948871 13.5217 2.05152C13.5217 3.15416 14.4187 4.04804 15.5251 4.04804H31.5529V20.0202C31.5529 21.1228 32.4499 22.0167 33.5564 22.0167C34.6629 22.0167 35.5599 21.1228 35.5599 20.0202L35.5599 2.05152ZM3.88737 34.441L34.9731 3.46327L32.1397 0.639766L1.05403 31.6175L3.88737 34.441Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </button>
+          </form>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.69818266784407!2d3.4844087002441397!3d6.625680408953264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bed1e9c774379%3A0xbcff8281fe944815!2sAgric!5e0!3m2!1sen!2sng!4v1712373521807!5m2!1sen!2sng"
+            style="border: 0"
+            class="map dark"
+            width="600"
+            height="450"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!--footer section-->
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">
+          © <span id="current-year"></span> lanre. All rights reserved.
+        </p>
+
+        <div class="icons">
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a
+      href="#top"
+      class="back-top-btn"
+      aria-label="back to top"
+      data-back-top-btn
+      >0%</a
+    >
+
+    <!--javascript-->
+    <script src="js/main.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
+<!-- --primary-background: #fafafa;
+--accent-color: #6200ee;
+--primary-text: #1e1e1e;
+--secondary-text: #757575;
+--interactive-elements: #03dac6; -->
