@@ -593,15 +593,28 @@
         </div>
 
         <div class="grid-row">
-          <form>
-            <input type="text" name="Name" placeholder="Name *" required />
-            <input type="email" name="Email" placeholder="Email *" required />
+          <form id="contact-form">
+            <input
+              type="text"
+              id="contact-name"
+              name="Name"
+              placeholder="Name *"
+              required
+            />
+            <input
+              type="email"
+              id="contact-email"
+              name="Email"
+              placeholder="Email *"
+              required
+            />
             <textarea
               name="Message"
-              id=""
+              id="contact-message"
               rows="6"
               placeholder="Your Massage *"
             ></textarea>
+            <small></small>
             <button type="submit" class="btn-1">
               Send Your Quest
 
@@ -674,6 +687,10 @@
     <script
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
   </body>
 </html>

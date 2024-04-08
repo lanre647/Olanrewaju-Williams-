@@ -168,3 +168,55 @@ window.onscroll = () => {
     }
   });
 };
+
+/**
+ * Email js: working email form
+ */
+const contactForm = document.getElementById("contact-form"),
+  contactName = document.getElementById("contact-name"),
+  contactEmail = document.getElementById("contact-email"),
+  contactMessage = document.getElementById("contact-message"),
+  contactFeedBack = document.querySelector("form small");
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  if (
+    contactName.value === "" ||
+    contactEmail.value === "" ||
+    contactMessage.value === ""
+  ) {
+    contactFeedBack.classList.remove("color-accent");
+    contactFeedBack.classList.add("color-red");
+
+    contactFeedBack.innerHTML = "⚠ Fill all input fields";
+  } else {
+    //serviceID,templateID,#form,publicKey
+    emailjs
+      .sendForm(
+        "service_53o2yvv",
+        "template_fm92pa8",
+        "#contact-form",
+        "oOu6n9ucxSh2UN6xm"
+      )
+      .then(
+        () => {
+          contactFeedBack.classList.add("color-accent");
+          contactFeedBack.innerHTML = "Message sent ✅";
+
+          setTimeout(() => {
+            contactFeedBack.innerHTML = "";
+          }, 5000);
+        },
+        (error) => {
+          alert("OOPS! SOMETHING HAS FAILED...", error);
+        }
+      );
+  }
+
+  contactName.value = "";
+  contactEmail.value = "";
+  contactMessage.value = "";
+};
+
+contactForm.addEventListener("submit", sendEmail);

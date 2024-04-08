@@ -839,8 +839,27 @@ form textarea {
   transition: var(--transition-2);
 }
 
+form input:first-child {
+  margin-top: 0px;
+}
+
 form textarea {
   resize: none;
+  margin-bottom: 0px;
+}
+
+form small {
+  display: inline-block;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+.color-red {
+  color: var(--error-messages);
+}
+
+.color-accent {
+  color: #00ff00;
 }
 
 form input:focus,
