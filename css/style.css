@@ -53,7 +53,7 @@
    * SPACING
    */
 
-  --section-spacing: 70px;
+  --section-spacing: 120px;
 
   /**
    * BORDER RADIUS
@@ -71,8 +71,6 @@
   --transition-3: 1000ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s;
   --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
   --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
-
-  --section-padding: 90px;
 
   --gradient-1: linear-gradient(180deg, transparent, var(--primary-background));
   --gradient-2: linear-gradient(
@@ -172,13 +170,15 @@ textarea {
 }
 
 .container {
-  max-width: 1060px;
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 1.5rem;
   margin: auto;
   /* width: 100%; */
 }
 
 .section {
-  padding-block: var(--section-padding);
+  padding-block: var(--section-spacing);
 }
 
 .row {
@@ -355,15 +355,18 @@ textarea {
 }
 
 .section-hero {
+  padding-block: 90px;
   width: 100%;
-  /* height: 100vh; */
-  position: relative;
   background-attachment: fixed;
+}
+
+.section-hero .container {
+  position: relative;
 }
 
 .header {
   backdrop-filter: blur(40px);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -371,34 +374,22 @@ textarea {
   backdrop-filter: blur;
 
   z-index: 60;
+  transition: var(--transition-1);
+}
+
+.scroll-down .header {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up .header {
+  box-shadow: var(--shadow-2);
+  padding-block: 10px;
 }
 
 .header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.header.active {
-  position: fixed;
-  /* background: var(--primary-background); */
-  /* background: rgba(20, 20, 20, 0.451); */
-  box-shadow: var(--shadow-2);
-
-  padding-block: 10px;
-  animation: slideIn 500ms ease-out forwards;
-}
-
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .header .logo {
@@ -442,6 +433,10 @@ textarea {
   max-width: 600px;
 }
 
+.section-hero {
+  position: relative;
+}
+
 .hand {
   font-size: calc(1.375rem + 1.5vw);
   margin-right: 0.5rem !important;
@@ -459,9 +454,8 @@ textarea {
   /* filter: grayscale(0.5); */
   width: 400px;
   position: absolute;
-  right: 9%;
-  top: 19%;
-  z-index: 2;
+  right: 0%;
+  top: 13%;
   border-radius: 9px;
   overflow: hidden;
   /* border: 3px solid var(--accent-color); */
@@ -474,8 +468,8 @@ textarea {
   height: 150px;
   display: flex;
   position: absolute;
-  right: 5%;
-  top: 12%;
+  right: 0%;
+  top: 0%;
   justify-content: center;
   align-items: center;
   font-size: 14px;
@@ -545,7 +539,7 @@ textarea {
 
 .img-col {
   flex-basis: 55%;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .content-col {
@@ -794,7 +788,7 @@ textarea {
 }
 
 .contact-section .heading-secondary {
-  margin-bottom: 2rem;
+  margin-bottom: 2.8rem;
 }
 
 .my-info {
@@ -845,9 +839,14 @@ form textarea {
   transition: var(--transition-2);
 }
 
+form textarea {
+  resize: none;
+}
+
 form input:focus,
 form textarea:focus {
   border: 1px solid var(--accent-color);
+  filter: brightness(9px);
 }
 
 .map {

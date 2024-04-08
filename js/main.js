@@ -38,13 +38,30 @@ function opentab(tabname) {
 }
 
 /**
- * Header active
+ * Reveal header on scroll
  */
 
-const header = document.querySelector("[data-header]");
+const body = document.body;
+let lastScroll = 0;
 
-window.addEventListener("scroll", function () {
-  header.classList[window.scrollY > 100 ? "add" : "remove"]("active");
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= 0) {
+    body.classList.remove("scroll-up");
+    return;
+  }
+
+  if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+    body.classList.remove("scroll-up");
+    body.classList.add("scroll-down");
+  } else if (
+    currentScroll < lastScroll &&
+    body.classList.contains("scroll-down")
+  ) {
+    body.classList.remove("scroll-down");
+    body.classList.add("scroll-up");
+  }
+  lastScroll = currentScroll;
 });
 
 /**
@@ -124,3 +141,30 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("show");
   }
 });
+
+/**
+ * Active nav link on scroll
+ */
+
+let navlinks = document.querySelectorAll(".main-nav-list li a");
+let sections = document.querySelectorAll("section");
+
+window.onscroll = () => {
+  sections.forEach((sec) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+
+    if (top >= offset && top < offset + height) {
+      navlinks.forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      // Find the corresponding navigation link and add the active class
+      document
+        .querySelector(`.main-nav-list li a[href="#${id}"]`)
+        .classList.add("active");
+    }
+  });
+};
