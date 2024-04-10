@@ -35,7 +35,7 @@
 
   /* font size */
   --fontSize-1: 5.4rem;
-  --fontSize-2: 4.5rem;
+  --fontSize-2: 4.6rem;
   --fontSize-3: 4rem;
   --fontSize-4: 3rem;
   --fontSize-5: 2.4rem;
@@ -183,8 +183,8 @@ textarea {
 
 .row {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .hidden {
@@ -292,7 +292,7 @@ textarea {
 }
 
 .heading-secondary {
-  font-size: 4.4rem;
+  font-size: var(--fontSize-2);
   line-height: 1.2;
   margin-bottom: 7rem;
 }
@@ -335,7 +335,6 @@ textarea {
 }
 
 .h2 {
-  font-size: var(--fontSize-2);
   background: var(--gradient-2);
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -542,7 +541,7 @@ textarea {
 }
 
 .img-col {
-  flex-basis: 55%;
+  flex-basis: 57%;
   /* height: 100vh; */
 }
 
@@ -558,14 +557,12 @@ textarea {
 
 .tab_titles {
   display: flex;
+  gap: 40px;
   margin: 20px 0 40px;
 }
 
 .tab_links {
   color: var(--primary-text);
-  margin-right: 50px;
-  font-size: 18px;
-  font-weight: 500;
   cursor: pointer;
   position: relative;
 }
@@ -916,9 +913,27 @@ form textarea:focus {
 }
 
 @media (max-width: 800px) {
+  :root {
+    --section-spacing: 70px;
+  }
+
+  .h1 {
+    font-size: var(--fontSize-2);
+  }
+
+  .section {
+    padding-block: var(--section-spacing);
+  }
+
+  .heading-secondary {
+    font-size: var(--fontSize-3);
+    margin-bottom: 30px;
+  }
+
   body {
     overflow-x: hidden;
   }
+
   .main-nav-list {
     position: fixed;
     left: 0px;
@@ -928,15 +943,15 @@ form textarea:focus {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: #000;
+    background: var(--primary-background);
     height: 100vh;
     width: 100%;
-    opacity: 0;
+    display: none;
     transition: var(--transition-2);
   }
 
   .activen {
-    opacity: 1;
+    display: flex;
   }
 
   .main-nav-list li a {
@@ -995,8 +1010,28 @@ form textarea:focus {
     width: 0;
   }
 
+  .section-hero {
+    padding-block: 70px;
+  }
+
+  .section-hero .hero {
+    padding-block: 5%;
+    max-width: 600px;
+  }
+
   .hero-img-box {
     position: static;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #circle-text-container {
+    display: none;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .content-col,
@@ -1004,11 +1039,7 @@ form textarea:focus {
     flex-basis: 100%;
   }
 
-  .img-col {
-    margin-bottom: 30px;
-  }
-
-  .img-col {
+  .content-col {
     font-size: 14px;
   }
 
@@ -1042,5 +1073,10 @@ form textarea:focus {
 
   .skill-grid {
     grid-template-columns: 1fr;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    gap: 20px;
   }
 }
