@@ -38,6 +38,19 @@ function opentab(tabname) {
 }
 
 /**
+ * mobile nav
+ */
+let mmenu = document.getElementById("menu-btn");
+let menuNav = document.querySelector(".main-nav-list");
+
+function toggleMenu() {
+  menuNav.classList.toggle("activen");
+  mmenu.classList.toggle("activem");
+}
+
+// mmenu.addEventListener("click", toggleMenu);
+
+/**
  * Reveal header on scroll
  */
 
