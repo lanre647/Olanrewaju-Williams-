@@ -1,4 +1,15 @@
 /**
+ * Page loader
+ */
+window.addEventListener("load", () => {
+  // --------------------------- page loader --------------------------------------------
+  document.querySelector(".page-loader").classList.add("slide-out-right");
+  setTimeout(() => {
+    document.querySelector(".page-loader").style.display = "none";
+  }, 1000);
+});
+
+/**
  * Circle text
  */
 const container = document.getElementById("circle-text-container");
@@ -42,8 +53,20 @@ function opentab(tabname) {
  */
 let mmenu = document.getElementById("menu-btn");
 let menuNav = document.querySelector(".main-nav-list");
+let navlinks = document.querySelectorAll(".main-nav-list li a");
+
+navlinks.forEach((link) => {
+  link.onclick = function () {
+    mmenu.classList.toggle("activem");
+    menuNav.classList.toggle("activen");
+    if (document.body.classList.contains("actives")) {
+      document.body.classList.remove("actives");
+    }
+  };
+});
 
 function toggleMenu() {
+  document.body.classList.toggle("actives");
   menuNav.classList.toggle("activen");
   mmenu.classList.toggle("activem");
 }
@@ -159,7 +182,6 @@ window.addEventListener("scroll", function () {
  * Active nav link on scroll
  */
 
-let navlinks = document.querySelectorAll(".main-nav-list li a");
 let sections = document.querySelectorAll("section");
 
 window.onscroll = () => {
