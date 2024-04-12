@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
         clearInterval(interval);
         return;
       }
-      progress.style.background = `conic-gradient(${color} ${degree}%,#333 0%)`;
+      progress.style.background = `conic-gradient(${color} ${degree}%,#777 0%)`;
       number.innerHTML = degree + "<span>%</span>";
       number.style.color = color;
     }, 50);
