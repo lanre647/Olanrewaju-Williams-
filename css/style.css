@@ -126,7 +126,6 @@ body {
   font-size: var(--fontSize-8);
   line-height: 1.75;
   transition: var(--transition-3);
-  overflow-x: hidden;
 }
 
 .actives {
@@ -359,6 +358,36 @@ textarea {
 
 .h6 {
   font-size: var(--fontSize-6);
+}
+
+[data-reveal] {
+  opacity: 0;
+  transition: 0.75s ease;
+}
+
+[data-reveal="show"] {
+  opacity: 1;
+}
+
+[data-reveal="top"] {
+  transform: translateY(-30px);
+}
+
+[data-reveal="bottom"] {
+  transform: translateY(30px);
+}
+
+[data-reveal="left"] {
+  transform: translateX(-30px);
+}
+
+[data-reveal="right"] {
+  transform: translateX(30px);
+}
+
+[data-reveal].revealed {
+  transform: translate(0);
+  opacity: 1;
 }
 
 /* page loader starts */
@@ -683,7 +712,7 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: var(--padding);
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
 }
 
@@ -861,7 +890,7 @@ textarea {
   text-align: center;
   background: var(--secondary-background);
   box-shadow: var(--shadow-2);
-  border-radius: 9px;
+  border-radius: 6px;
   padding: 40px;
 }
 
@@ -931,6 +960,7 @@ form textarea:focus {
 }
 
 .map {
+  border-radius: 6px;
   width: 100%;
   box-shadow: var(--shadow-2);
   /* height: 100%; */
@@ -993,6 +1023,10 @@ form textarea:focus {
 
   .container {
     padding: 0 2rem;
+  }
+
+  .header {
+    padding: 7px 6%;
   }
 
   .main-nav-list {

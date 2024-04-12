@@ -255,3 +255,53 @@ const sendEmail = (e) => {
 };
 
 contactForm.addEventListener("submit", sendEmail);
+
+/**
+ * SCROLL REVEAL
+ */
+
+const revealElements = document.querySelectorAll("[data-reveal]");
+const revealDelayElements = document.querySelectorAll("[data-reveal-delay]");
+
+const reveal = function () {
+  for (let i = 0, len = revealElements.length; i < len; i++) {
+    if (
+      revealElements[i].getBoundingClientRect().top <
+      window.innerHeight / 1.2
+    ) {
+      revealElements[i].classList.add("revealed");
+    }
+  }
+};
+
+for (let i = 0, len = revealDelayElements.length; i < len; i++) {
+  revealDelayElements[i].style.transitionDelay =
+    revealDelayElements[i].dataset.revealDelay;
+}
+
+window.addEventListener("scroll", reveal);
+window.addEventListener("load", reveal);
+
+/*
+Animated Circle
+*/
+document.addEventListener("DOMContentLoaded", function (e) {
+  let circles = document.querySelectorAll(".circle");
+  circles.forEach(function (progress) {
+    let degree = 0;
+    let targetDegress = parseInt(progress.getAttribute("data-degree"));
+    let color = progress.getAttribute("data-color");
+    let number = progress.querySelector(".number");
+
+    let interval = setInterval(function () {
+      degree += 1;
+      if (degree > targetDegress) {
+        clearInterval(interval);
+        return;
+      }
+      progress.style.background = `conic-gradient(${color} ${degree}%,#333 0%)`;
+      number.innerHTML = degree + "<span>%</span>";
+      number.style.color = color;
+    }, 50);
+  });
+});
