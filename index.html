@@ -25,60 +25,34 @@
     </div>
     <!-- page loader end -->
 
+    <!-- blob and blur -->
+    <div id="blob"></div>
+    <div id="blur"></div>
+
     <!-- header -->
     <header class="header" data-header>
-      <a href="#">
+      <a href="#" data-reveal="bottom" data-reveal-delay="0.5s">
         <img class="logo" alt="logo" src="assets/logo.svg" />
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li>
-            <a
-              class="main-nav-link active"
-              data-reveal="bottom"
-              data-reveal-delay="0.35s"
-              href="#section-hero"
-              >Home</a
-            >
+          <li data-reveal="bottom" data-reveal-delay="0.5s">
+            <a class="main-nav-link active" href="#section-hero">Home</a>
           </li>
-          <li>
-            <a
-              class="main-nav-link"
-              data-reveal="bottom"
-              data-reveal-delay="0.75s"
-              href="#about-section"
-              >About</a
-            >
+          <li data-reveal="bottom" data-reveal-delay="0.45s">
+            <a class="main-nav-link" href="#about-section">About</a>
           </li>
-          <li>
-            <a
-              class="main-nav-link"
-              data-reveal="bottom"
-              data-reveal-delay="0.885s"
-              href="#portfolio-section"
-              >Portfolio</a
-            >
+          <li data-reveal="bottom" data-reveal-delay="0.70s">
+            <a class="main-nav-link" href="#portfolio-section">Portfolio</a>
           </li>
-          <li>
-            <a
-              class="main-nav-link"
-              data-reveal="bottom"
-              data-reveal-delay="0.20s"
-              href="#skills-section"
-              >Skills</a
-            >
+          <li data-reveal="bottom" data-reveal-delay="0.95s">
+            <a class="main-nav-link" href="#skills-section">Skills</a>
           </li>
-          <li>
-            <a
-              class="main-nav-link"
-              data-reveal="bottom"
-              data-reveal-delay="0.95s"
-              href="#contact-section"
-              >Contact</a
-            >
+          <li data-reveal="bottom" data-reveal-delay="1s">
+            <a class="main-nav-link" href="#contact-section">Contact</a>
           </li>
-          <li>
-            <a class="btn-1" data-reveal="bottom" data-reveal-delay="0.30s">
+          <li data-reveal="bottom" data-reveal-delay="1.35s">
+            <a class="btn-1">
               Resume
 
               <div class="icon">
@@ -101,12 +75,14 @@
         </ul>
       </nav>
       <div class="action">
-        <img
-          id="togglebtn"
-          src="assets/sun.png"
-          alt="light/dark mode icon"
-          title="Switch Mode"
-        />
+        <button>
+          <img
+            id="togglebtn"
+            src="assets/sun.png"
+            alt="light/dark mode icon"
+            title="Switch Mode"
+          />
+        </button>
         <div id="menu-btn" class="hidden menu" onclick="toggleMenu()">
           <div>
             <span class="line-1"></span>
@@ -124,21 +100,21 @@
             <p
               class="h5 subheading"
               data-reveal="bottom"
-              data-reveal-delay="0.5s"
+              data-reveal-delay="1.45s"
             >
               <span class="hand">👋</span> I'm Lanre
             </p>
             <h1
               class="h1 hero-title"
               data-reveal="bottom"
-              data-reveal-delay="0.75s"
+              data-reveal-delay="1.55s"
             >
               Front-End Developer + UI/UX Designer
             </h1>
-            <div class="hero-img-box">
+            <div class="hero-img-box" data-tilt>
               <img
                 data-reveal="bottom"
-                data-reveal-delay="1.23s"
+                data-reveal-delay="1.59s"
                 src="assets/olanrewajuwilliams.jpg"
                 class="hero-img"
                 alt="olanrewaju williams"
@@ -147,12 +123,12 @@
             <div
               id="circle-text-container"
               data-reveal="bottom"
-              data-reveal-delay="1.39s"
+              data-reveal-delay="1.69s"
             ></div>
             <p
               class="hero-description-text"
               data-reveal="bottom"
-              data-reveal-delay="1s"
+              data-reveal-delay="1.77s"
             >
               Welcome to my digital workspace! As a seasoned developer, I bring
               a symphony of skills to the table:
@@ -169,7 +145,7 @@
               perfection. Explore, engage, and let's turn your vision into a
               reality that resonates with excellence. 🎶👨‍💻 -->
             </p>
-            <div class="links" data-reveal="bottom" data-reveal-delay="1.15s">
+            <div class="links" data-reveal="bottom" data-reveal-delay="1.99s">
               <a href="#contact-section" class="btn-1">
                 Get In Touch
 
@@ -199,6 +175,8 @@
           </div>
         </div>
       </div>
+      <div class="gradient-1"></div>
+      <div class="gradient-2"></div>
     </section>
 
     <!-- about section-->
@@ -209,7 +187,7 @@
         </h2>
       </div>
       <div class="container row">
-        <div class="img-col" data-reveal="left">
+        <div class="img-col" data-reveal="left" data-tilt>
           <img src="assets/olanrewajuwilliams-about2.jpg" alt="" />
         </div>
         <div class="content-col" data-reveal="right">
@@ -667,6 +645,7 @@
               type="text"
               id="contact-name"
               name="Name"
+              autocomplete="none"
               placeholder="Name *"
               required
             />
@@ -747,6 +726,13 @@
       data-back-top-btn
       >0%</a
     >
+
+    <!-- 
+    - #CUSTOM CURSOR
+  -->
+
+    <div class="cursor-dot" data-cursor></div>
+    <div class="cursor-outline" data-cursor></div>
 
     <!--javascript-->
     <script src="js/main.js"></script>

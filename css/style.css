@@ -125,7 +125,7 @@ body {
   font-family: var(--fontFamily);
   font-size: var(--fontSize-8);
   line-height: 1.75;
-  transition: var(--transition-3);
+  transition: var(--transition-1);
 }
 
 .actives {
@@ -390,6 +390,52 @@ textarea {
   opacity: 1;
 }
 
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1 1.4;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+#blob {
+  background-color: white;
+  height: 33vmax;
+  aspect-ratio: 1;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  /* translate: -50% -50%; */
+  border-radius: 50%;
+  background: linear-gradient(
+    to right,
+    var(--accent-color),
+    var(--accent-color)
+  );
+  animation: rotate 20s infinite;
+  opacity: 0.5;
+  z-index: -5;
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -2;
+  backdrop-filter: blur(14vmax);
+}
+
+#blur,
+#blob {
+  pointer-events: none;
+}
+
 /* page loader starts */
 .page-loader {
   position: fixed;
@@ -631,12 +677,12 @@ textarea {
 }
 
 .img-col {
-  flex-basis: 57%;
+  flex-basis: 53%;
   /* height: 100vh; */
 }
 
 .content-col {
-  flex-basis: 40%;
+  flex-basis: 44%;
   /* position: sticky;
   top: 0; */
 }
@@ -1003,6 +1049,49 @@ form textarea:focus {
   color: var(--primary-text);
 }
 
+/**
+   * CUSTOM CURSOR
+   */
+
+.cursor-dot,
+.cursor-outline {
+  display: block;
+  position: fixed;
+  top: -60px;
+  left: -60px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 70;
+  transition-property: opacity, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  pointer-events: none;
+}
+
+.cursor-dot {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-text);
+  transform: translate(-50%, -50%) scale(0.1);
+}
+
+.cursor-dot.hovered {
+  transform: translate(-50%, -50%) scale(1);
+  mix-blend-mode: exclusion;
+}
+
+.cursor-outline {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--primary-text);
+  opacity: 0.5;
+  transition-duration: 100ms;
+}
+
+.cursor-outline.hovered {
+  opacity: 0;
+}
+
 @media (max-width: 800px) {
   :root {
     --section-spacing: 70px;
@@ -1196,6 +1285,16 @@ form textarea:focus {
     order: 1;
   }
 
+  .project-card-2,
+  .project-card-1 {
+    padding: 0;
+  }
+
+  .project-card-2 .card-content,
+  .project-card-1 .card-content {
+    padding: 24px;
+  }
+
   .project-card {
     --padding: 24px;
     display: flex;
@@ -1211,5 +1310,10 @@ form textarea:focus {
   .footer .container {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .cursor-dot,
+  .cursor-outline {
+    display: none;
   }
 }
