@@ -34,7 +34,7 @@
   --fontFamily: "Roboto", sans-serif;
 
   /* font size */
-  --fontSize-1: 5.4rem;
+  --fontSize-1: 6rem;
   --fontSize-2: 4.6rem;
   --fontSize-3: 4rem;
   --fontSize-4: 3rem;
@@ -125,7 +125,8 @@ body {
   font-family: var(--fontFamily);
   font-size: var(--fontSize-8);
   line-height: 1.75;
-  transition: var(--transition-1);
+  transition: var(--cubic-in);
+  overflow-x: hidden;
 }
 
 .actives {
@@ -177,7 +178,6 @@ textarea {
   max-width: 120rem;
   padding: 0 1.5rem;
   margin: auto;
-  /* width: 100%; */
 }
 
 .section {
@@ -849,7 +849,22 @@ textarea {
 
 /*skills-section*/
 
-.skill-grid {
+.skills-section .container {
+  overflow-x: hidden;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills-section .skills ion-icon {
+  font-size: 10rem;
+  color: var(--accent-color);
+}
+
+/* .skill-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -914,7 +929,7 @@ textarea {
   font-weight: 500;
   font-size: 0.8em;
   line-height: 0.6em;
-}
+} */
 
 /* contact-section */
 .grid {
@@ -1215,6 +1230,7 @@ form textarea:focus {
   }
 
   .hero-title {
+    font-size: var(--fontSize-2);
     margin-bottom: 5rem;
     color: var(--primary-text);
   }
@@ -1303,8 +1319,13 @@ form textarea:focus {
     overflow: hidden;
   }
 
-  .skill-grid {
-    grid-template-columns: 1fr;
+  .skills {
+    gap: 9px;
+  }
+
+  .skills-section .skills ion-icon {
+    font-size: 8rem;
+    color: var(--accent-color);
   }
 
   .footer .container {
