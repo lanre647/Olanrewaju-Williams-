@@ -53,7 +53,7 @@
    * SPACING
    */
 
-  --section-spacing: 120px;
+  --section-spacing: 200px;
 
   /**
    * BORDER RADIUS
@@ -307,6 +307,10 @@ textarea {
   text-transform: uppercase;
   margin-bottom: 1rem;
   letter-spacing: 0.75px;
+}
+
+.center-text {
+  text-align: center;
 }
 
 .title {
@@ -1109,7 +1113,7 @@ form textarea:focus {
 
 @media (max-width: 800px) {
   :root {
-    --section-spacing: 70px;
+    --section-spacing: 110px;
   }
 
   .h1 {
@@ -1277,9 +1281,9 @@ form textarea:focus {
     flex-basis: 100%;
   }
 
-  .content-col {
+  /* .content-col {
     font-size: 14px;
-  }
+  } */
 
   .grid-list {
     grid-template-columns: 1fr;
