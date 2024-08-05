@@ -53,7 +53,7 @@
    * SPACING
    */
 
-  --section-spacing: 200px;
+  --section-spacing: 220px;
 
   /**
    * BORDER RADIUS
@@ -1113,7 +1113,7 @@ form textarea:focus {
 
 @media (max-width: 800px) {
   :root {
-    --section-spacing: 110px;
+    --section-spacing: 117px;
   }
 
   .h1 {
