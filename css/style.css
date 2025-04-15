@@ -838,6 +838,14 @@ textarea {
 }
 
 .project-card .btn-link a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 20rem;
+  font-size: var(--fontSize-6);
+  color: var(--primary-text);
+  background: var(--gradient-2);
   transition: var(--transition-2);
 }
 
